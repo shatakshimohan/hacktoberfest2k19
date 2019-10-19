@@ -1,0 +1,14 @@
+start = int(input('lower limit of range:'))
+end = int(input('upper limit of range:'))
+lower = int(start)
+upper = int(end)
+for num in range(lower, upper+1):
+    print(num)
+    tot = 0
+    temp = num
+    while temp != 0:
+        dig = temp % 10
+        tot += dig ** 3
+        temp //= 10
+    if num == tot:
+            print(num, 'is an armstrong number')
